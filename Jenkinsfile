@@ -26,7 +26,7 @@ pipeline {
                 )])
                 {
                     sh "docker login ghcr.io -u ${env.githubUser} -p ${env.githubPassword}"
-                    sh "docker push ${env.IMAGE_NAME}:${env.BUILD_NUMBER}"
+                    sh "docker push ghcr.io/karnwd/kwgit"
                 }
             }
         }
