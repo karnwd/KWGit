@@ -1,16 +1,16 @@
 apiVersion: app/v1
 kind: Deployment
 metadata:
-  name: kwgit-ka
+  name: kwgit
 spec:
   replicas: 1
   selecttor:
     matchLabels:
-      app: kwgit-ka
+      app: kwgit
   template:
     metadata:
       labels:
-        app: kwgit-ka
+        app: kwgit
     spec:
       containers:
         - name: kwgit-server
@@ -26,12 +26,10 @@ metadata:
     app: karnw-service
 spec:
   selector:
-    app: kwgit-ka
+    app: kwgit
   ports:
     - name: web-port
       protocol: TCP
       port: 8081
       targetPort: 80
   type: ClusterIP
-
-  # 9, 13, 29
