@@ -1,16 +1,16 @@
 apiVersion: app/v1
 kind: Deployment
 metadata:
-  name: kwgit
+  name: kwgit-ka
 spec:
   replicas: 1
   selecttor:
     matchLabels:
-      app: kwgit
+      app: kwgit-ka
   template:
     metadata:
       labels:
-        app: kwgit
+        app: kwgit-ka
     spec:
       containers:
         - name: kwgit-server
@@ -26,7 +26,7 @@ metadata:
     app: karnw-service
 spec:
   selector:
-    app: kwgit
+    app: kwgit-ka
   ports:
     - name: web-port
       protocol: TCP
