@@ -21,9 +21,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-service
+  name: karnw-service
   labels:
-    app: hello-service
+    app: karnw-service
 spec:
   selector:
     app: kwgit
