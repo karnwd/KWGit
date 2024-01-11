@@ -35,6 +35,12 @@ pipeline {
                 }
             }
         }
+        stage('Deploy Stage (K8s)'){
+            agent {label 'deploy-server'}
+            steps {
+                sh "kubectl apply -f deploy-web.yml"
+            }
+        }
     }
 }
 // XXXXX
