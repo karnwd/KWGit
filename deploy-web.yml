@@ -15,6 +15,7 @@ spec:
       containers:
         - name: user11-server
           image: ghcr.io/karnwd/kwgit
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
